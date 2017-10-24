@@ -1,0 +1,4 @@
+Binary  Tree
+This is a Binary search tree for 32-bit integers implemented in C using some C functions to allocate and free memory.
+The binary tree can be created, elements can be inserted, elements can be searched for and the whole tree can be deleted.
+I still want to add a remove(int) function.
