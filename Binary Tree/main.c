@@ -15,6 +15,8 @@ extern struct Tree* asm_Tree();
 extern struct Node* find(struct Tree*, int);
 extern struct Node* insert(struct Tree*, int);
 extern void print(struct Tree*);
+extern void removeNode(struct Tree*, int);
+extern void deleteTree(struct Tree*);
 
 int main(){
 	struct Tree* myTree = asm_Tree();
@@ -27,8 +29,18 @@ int main(){
 	}else{
 		printf("%s\n", "NOT found");
 	}
-	// printf("%d\n", myTree->root->value );
-	// printf("%d\n", myTree->root->left->value );
+	if(find(myTree, 0)){
+		printf("%s\n","found" );
+	}else{
+		printf("%s\n", "NOT found");
+	}
+
+	print(myTree);
+	// removeNode(myTree,8);
+	// removeNode(myTree,2);
+	removeNode(myTree,3);
+	removeNode(myTree,9);
+	// removeNode(myTree,5);	//This is the root and cannot be deleted so far
 
 	print(myTree);
 	deleteTree(myTree);
